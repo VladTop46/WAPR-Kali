@@ -58,15 +58,15 @@ sudo cp /mnt/windows/Windows/System32/config/SAM /mnt/windows/Windows/System32/c
 sudo cp /mnt/windows/Windows/System32/config/SAM /mnt/windows/Windows/SAM.bak
 sleep 1
 
+/usr/sbin/chntpw /mnt/windows/Windows/System32/config/SAM -l
 echo 'All users on this PC, please select one:'
-/usr/sbin/chntpw /mnt/Windows/System32/config/SAM -l
 read u
 echo 'User' $u 'is selected, continue? [Y/N]'
 read c
 
 case $c in 
 y)
-/usr/sbin/chntpw /mnt/Windows/System32/config/SAM -u $u
+/usr/sbin/chntpw /mnt/windows/Windows/System32/config/SAM -u $u
 sleep 1
 echo 'Successfully deleted password for' $u
 exit 0

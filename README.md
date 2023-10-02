@@ -9,6 +9,7 @@ Clone the repository and run the script.
 ```bash
 git clone https://github.com/VladTop46/WAPR-Kali
 cd WAPR-Kali
+chmod +x removepass.sh
 ./removepass.sh
 ```
 
